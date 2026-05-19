@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Shop</title>
+    <!-- Google Fonts for Clean Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- Header / Navbar -->
+<header class="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo">VITAL<span>GLOW</span></a>
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="#" class="nav-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" class="nav-icon"><i class="fa-solid fa-user"></i></a>
+            <button class="nav-icon cart-trigger" id="cartBtn">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-content">
+        <span class="hero-subtitle">New Collection 2026</span>
+        <h1 class="hero-title">Redefine Your Everyday Style</h1>
+        <p class="hero-text">Experience premium minimalist design crafted for modern living. Explore curated essentials that blend functionality with timeless aesthetics.</p>
+        <a href="#" class="btn-primary">Shop Collection <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<!-- Featured Products Section -->
+<main class="container">
+    <div class="section-header">
+        <h2>Featured Products</h2>
+        <p>Our most wanted pieces updated weekly.</p>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop" alt="Premium Sneakers">
+                <button class="add-to-cart-btn" data-id="1" data-name="Premium Sneakers" data-price="120.00">Add to Bag</button>
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Classic Crimson Sneakers</h3>
+                <div class="product-price">$120.00</div>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=600&auto=format&fit=crop" alt="Minimalist Watch">
+                <button class="add-to-cart-btn" data-id="2" data-name="Minimalist Watch" data-price="185.00">Add to Bag</button>
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Minimalist Chronograph Watch</h3>
+                <div class="product-price">$185.00</div>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=600&auto=format&fit=crop" alt="Designer Sunglasses">
+                <button class="add-to-cart-btn" data-id="3" data-name="Designer Sunglasses" data-price="65.00">Add to Bag</button>
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Modern Aviator Sunglasses</h3>
+                <div class="product-price">$65.00</div>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=600&auto=format&fit=crop" alt="Wireless Headphones">
+                <button class="add-to-cart-btn" data-id="4" data-name="Wireless Headphones" data-price="210.00">Add to Bag</button>
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Studio Wireless Headphones</h3>
+                <div class="product-price">$210.00</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Slide-out Shopping Cart Sidebar -->
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <h3>Your Shopping Bag (<span id="cartSidebarCount">0</span>)</h3>
+        <button class="close-cart" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-items" id="cartItemsContainer">
+        <!-- Dynamic items go here via JS -->
+        <div class="empty-cart-message">Your bag is completely empty.</div>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Subtotal:</span>
+            <span id="cartSubtotal">$0.00</span>
+        </div>
+        <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+</div>
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
