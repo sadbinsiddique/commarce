@@ -6,7 +6,8 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>4.0.6</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
+		<!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.commarce</groupId>
 	<artifactId>commarce</artifactId>
@@ -14,6 +15,8 @@
 	<name/>
 	<description/>
 	<url/>
+
+
 	<licenses>
 		<license/>
 	</licenses>
@@ -29,6 +32,10 @@
 	<properties>
 		<java.version>26</java.version>
 	</properties>
+
+
+
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
