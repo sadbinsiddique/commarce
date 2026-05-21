@@ -12,10 +12,4 @@ public class FunRestController {
     public String Home() {
         return "hello World";
     }
-
-    @Value("${coach.name}")
-    private String CoachName;
-
-    @Value("${spring.application.name}")
-    private String ApplicationName;
 }
