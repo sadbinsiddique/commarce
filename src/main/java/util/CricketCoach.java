@@ -1,7 +1,6 @@
 package util;
 
 import org.springframework.stereotype.Component;
-import util.Coach;
 
 @Component
 public class CricketCoach implements Coach {

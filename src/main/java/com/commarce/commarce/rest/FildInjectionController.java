@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import util.Team;
 
 
-// This is fild injection example. It is not recommended to use fild injection because it is not testable and it is not recommended to use it in production code.
+// This is fild injection example. It is not recommended to use fild injection because it is not testable, and it is not recommended to use it in production code.
 @RestController
 public class FildInjectionController {
 
