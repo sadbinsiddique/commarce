@@ -13,7 +13,7 @@ public class SadRestController {
     private String CoachName;
 
     @GetMapping("/sad")
-    public String sad() {
+    public String getProjectInfo() {
         String Massage = "Hello %s! Welcome to %s Project.";
         return String.format(Massage, CoachName, AppName);
 
