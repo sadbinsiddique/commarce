@@ -13,7 +13,7 @@ public class FunRestController {
         return "hello World";
     }
 
-    // define a private field for dependency injection
+    // dependency injection
     private final Coach myCoach;
 
     @Autowired
