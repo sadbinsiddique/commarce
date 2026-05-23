@@ -20,7 +20,7 @@ public class FunRestController {
     // constructor injection: Spring will provide a Coach implementation
     //in Qualifier always use Camel Case use with constractor
     @Autowired
-    public FunRestController(@Qualifier("tannisCoach") Coach coach) {
+    public FunRestController(@Qualifier("trackCoach") Coach coach) {
         this.myCoach = coach;
     }
 
