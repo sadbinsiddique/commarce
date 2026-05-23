@@ -21,6 +21,8 @@ public class FunRestController {
     //in Qualifier always use Camel Case use with constractor
     @Autowired
     public FunRestController(@Qualifier("trackCoach") Coach coach) {
+
+        System.out.println("In constructor:  " + this.getClass().getSimpleName());
         this.myCoach = coach;
     }
 
