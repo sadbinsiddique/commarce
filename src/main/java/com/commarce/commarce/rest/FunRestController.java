@@ -9,21 +9,20 @@ import util.Coach;
 @RestController
 public class FunRestController {
 
-    @GetMapping("/")
-    public String Home() {
-        return "hello World";
-    }
-
     // dependency injection
     private final Coach myCoach;
 
     // constructor injection: Spring will provide a Coach implementation
-    //in Qualifier always use Camel Case use with constractor
+    // in Qualifier always use camelCase with constructor
     @Autowired
-    public FunRestController(@Qualifier("trackCoach") Coach coach) {
-
-        System.out.println("In constructor:  " + this.getClass().getSimpleName());
+    public FunRestController(@Qualifier("custom-id") Coach coach) {
+        System.out.println("In constructor: " + this.getClass().getSimpleName());
         this.myCoach = coach;
+    }
+
+    @GetMapping("/")
+    public String home() {
+        return "hello World";
     }
 
     @GetMapping("/daily-workout")
