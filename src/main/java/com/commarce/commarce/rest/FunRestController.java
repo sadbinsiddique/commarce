@@ -19,6 +19,7 @@ public class FunRestController {
         System.out.println("In constructor: " + this.getClass().getSimpleName());
         this.myCoach = coach;
     }
+    // add dummy text for check is CI pipeline Working Or Not ?
 
     @GetMapping("/")
     public String home() {
