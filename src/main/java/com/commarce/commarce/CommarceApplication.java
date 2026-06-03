@@ -19,7 +19,7 @@ import java.util.Scanner;
 	@Bean
 	public CommandLineRunner commandLineRunner(StudentDIO studentDIO) {
 
-		return runner -> {
+		return _ -> {
 			
 			//createStudent(studentDIO);
 			createMultiStudent(studentDIO);
@@ -32,18 +32,32 @@ import java.util.Scanner;
 
 		//creating Scanner as object
 		Scanner dataScanner = new Scanner(System.in);
-		System.out.println("Enter How Many student you want to create");
+		System.out.println("Enter How Many student you want to create ?");
+		System.out.print("> ");
 		int studentCount = dataScanner.nextInt();
 
+		System.out.println("\n".repeat(50));
 		for (int i = 0 ; i < studentCount; i++) {
-			System.out.println("Enter First Name of Student " + (i+1));
+
+			System.out.println("Enter First Name of Student's of " + (i+1));
+			System.out.print("> ");
 			String firstName = dataScanner.next();
 
-			System.out.println("Enter Last Name of Student " + (i+1));
+			System.out.println("\n".repeat(50));
+
+
+			System.out.println("Enter Last Name of Student's of " + (i+1));
+			System.out.print("> ");
 			String lastName = dataScanner.next();
 
-			System.out.println("Enter Email of Student " + (i+1));
+			System.out.println("\n".repeat(50));
+
+			System.out.println("Enter Email of Student's of " + (i+1));
+			System.out.print("> ");
 			String email = dataScanner.next();
+
+			System.out.println("\n".repeat(50));
+
 
 			// create the student Object
 			System.out.println("Creating Student Object");
