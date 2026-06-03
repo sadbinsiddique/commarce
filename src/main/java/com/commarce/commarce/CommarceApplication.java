@@ -21,7 +21,7 @@ import java.util.Scanner;
 
 		return _ -> {
 			
-			//createStudent(studentDIO);
+			createStudent(studentDIO);
 			createMultiStudent(studentDIO);
 		};
 	}
