@@ -5,6 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.boot.CommandLineRunner;
+
+import java.util.List;
 import java.util.Scanner;
 
 @SpringBootApplication(
@@ -28,8 +30,21 @@ import java.util.Scanner;
 			//createMultiStudent(studentDIO);
 
 			//search students
-			searchStudent(studentDIO);
+			//searchStudent(studentDIO);
+			
+			//Database Query
+			queryForStudent(studentDIO);
 		};
+	}
+
+	private void queryForStudent(StudentDIO studentDIO) {
+		//get list of student
+		List<Student> theStudents = studentDIO.findAll();
+
+		//display list of student
+		for (Student student : theStudents) {
+			System.out.println(student);
+		}
 	}
 
 	private void searchStudent(StudentDIO studentDIO) {
