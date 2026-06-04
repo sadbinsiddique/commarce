@@ -14,4 +14,7 @@ public interface StudentDIO {
     List<Student> findAll();
 
     List<Student> findByLastName(String LastName);
+
+    void update(Student theStudent);
+    
 }

@@ -25,8 +25,9 @@ public class StudentDIOImpl implements StudentDIO {
     @Override
     @Transactional
     public void save(Student theStudent) {
-        //save the student using entity manager
-        entityManager.persist(theStudent);
+        //save or update the student using entity manager
+        //merge handles both new entities and detached entities
+        entityManager.merge(theStudent);
     }
 
     //Implement search method
@@ -53,5 +54,10 @@ public class StudentDIOImpl implements StudentDIO {
 
         // return the result
         return theQuery.getResultList();
+    }
+
+    @Override
+    public void update(Student theStudent) {
+        entityManager.merge(theStudent);
     }
 }

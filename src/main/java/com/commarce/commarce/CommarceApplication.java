@@ -34,8 +34,24 @@ import java.util.Scanner;
 			
 			//Database Query
 			//queryForStudent(studentDIO);
-			queryForStudentLastName(studentDIO);
+			//queryForStudentLastName(studentDIO);
+			updateStudent(studentDIO);
 		};
+	}
+
+	private void updateStudent(StudentDIO studentDIO) {
+		//retrieve student based on the id: primary key
+		int  studentId = 1;
+		System.out.println("Getting with id " + studentId);
+		Student myStudent = studentDIO.findById(studentId);
+
+		//chang first name and last Name
+		myStudent.setFirstName("aaa");
+		myStudent.setLastName("bbb");
+
+		studentDIO.save(myStudent);
+
+		System.out.println("Saving student with id " + studentId);
 	}
 
 	private void queryForStudentLastName(StudentDIO studentDIO) {
