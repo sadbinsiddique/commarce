@@ -25,4 +25,10 @@ public class StudentDIOImpl implements StudentDIO {
         //save the student using entity manager
         entityManager.persist(theStudent);
     }
+
+    //Implement search method
+    @Override
+    public Student findById(int id) {
+        return entityManager.find(Student.class, id);
+    }
 }

@@ -20,10 +20,30 @@ import java.util.Scanner;
 	public CommandLineRunner commandLineRunner(StudentDIO studentDIO) {
 
 		return _ -> {
-			
-			createStudent(studentDIO);
-			createMultiStudent(studentDIO);
+
+			// this creates single entry
+			//createStudent(studentDIO);
+
+			//this creates multiple entry
+			//createMultiStudent(studentDIO);
+
+			//search students
+			searchStudent(studentDIO);
 		};
+	}
+
+	private void searchStudent(StudentDIO studentDIO) {
+		//create student object
+		Student tempStudent = new Student("Sad Bin", "Siddique", "sadbinsiddique@gmail.com" );
+		studentDIO.save(tempStudent);
+		System.out.println("Generated id: " + tempStudent.getId());
+
+		int theId = tempStudent.getId();
+		Student result = studentDIO.findById(theId);
+
+		//retrieve student base on the id: primary key
+		System.out.println("Found the student: " + result);
+		//display student
 	}
 
 	private void createMultiStudent(StudentDIO studentDIO) {
