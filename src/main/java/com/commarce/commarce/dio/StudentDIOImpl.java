@@ -38,21 +38,20 @@ public class StudentDIOImpl implements StudentDIO {
     @Override
     public List<Student> findAll() {
         // create the query
-        //TypedQuery<Student> theQuery = entityManager.createQuery("from Student order by lastName desc", Student.class);
         TypedQuery<Student> theQuery = entityManager.createQuery("from Student", Student.class);
+
+
         // return the result
         return theQuery.getResultList();
     }
 
     @Override
-    public List<Student> findByLastName(String lastName) {
-        // Create JPQL query using the entity property name (case-sensitive)
-        TypedQuery<Student> ckData = entityManager.createQuery("from Student where lastName = :theData", Student.class);
+    public List<Student> findByLastName(String LastName) {
+        // create the query
+        TypedQuery<Student> theQuery = entityManager.createQuery("from Student where lastName=:theData", Student.class);
+        theQuery.setParameter("theData", LastName);
 
-        // set Query parameters
-        ckData.setParameter("theData", lastName);
-
-        // return Query result
-        return ckData.getResultList();
+        // return the result
+        return theQuery.getResultList();
     }
 }
