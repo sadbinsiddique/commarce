@@ -38,8 +38,7 @@ public class StudentDIOImpl implements StudentDIO {
     @Override
     public List<Student> findAll() {
         // create the query
-        TypedQuery<Student> theQuery = entityManager.createQuery("from Student", Student.class);
-
+        TypedQuery<Student> theQuery = entityManager.createQuery("from Student order by lastName desc", Student.class);
 
         // return the result
         return theQuery.getResultList();
