@@ -16,4 +16,6 @@ public interface StudentDIO {
     void update(Student theStudent);
 
     void delete(int id);
+
+    int deleteAll();
 }
