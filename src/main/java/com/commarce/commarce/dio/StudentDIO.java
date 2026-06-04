@@ -7,14 +7,13 @@ import java.util.List;
 public interface StudentDIO {
     void save(Student theStudent);
 
-    //for search
     Student findById(int id);
 
-    //Get All Result
     List<Student> findAll();
 
     List<Student> findByLastName(String LastName);
 
     void update(Student theStudent);
-    
+
+    void delete(int id);
 }

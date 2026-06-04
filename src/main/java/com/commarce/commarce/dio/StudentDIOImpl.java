@@ -12,25 +12,17 @@ import java.util.List;
 @Repository
 public class StudentDIOImpl implements StudentDIO {
 
-    //define fild for entity manager
     private final EntityManager entityManager;
 
-    // Inject entity manager using constructor injection
     @Autowired
     public StudentDIOImpl(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
-    //Implement save method
     @Override
     @Transactional
-    public void save(Student theStudent) {
-        //save or update the student using entity manager
-        //merge handles both new entities and detached entities
-        entityManager.merge(theStudent);
-    }
+    public void save(Student theStudent) {entityManager.merge(theStudent);}
 
-    //Implement search method
     @Override
     public Student findById(int id) {
         return entityManager.find(Student.class, id);
@@ -59,5 +51,14 @@ public class StudentDIOImpl implements StudentDIO {
     @Override
     public void update(Student theStudent) {
         entityManager.merge(theStudent);
+    }
+
+    @Override
+    @Transactional
+    public void delete(int id) {
+        // retrieved the Data
+        Student theStudent = entityManager.find(Student.class, id);
+        //delete data
+        entityManager.remove(theStudent);
     }
 }

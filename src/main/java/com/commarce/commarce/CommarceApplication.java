@@ -33,10 +33,21 @@ import java.util.Scanner;
 			//searchStudent(studentDIO);
 			
 			//Database Query
+
 			//queryForStudent(studentDIO);
+
 			//queryForStudentLastName(studentDIO);
-			updateStudent(studentDIO);
+
+			//updateStudent(studentDIO);
+
+			deleteStudent(studentDIO);
 		};
+	}
+
+	private void deleteStudent(StudentDIO studentDIO) {
+		int studentId = 6;
+		System.out.println("Deleting student with id " + studentId);
+		studentDIO.delete(studentId);
 	}
 
 	private void updateStudent(StudentDIO studentDIO) {
