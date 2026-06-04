@@ -10,5 +10,8 @@ public interface StudentDIO {
     //for search
     Student findById(int id);
 
+    //Get All Result
     List<Student> findAll();
+
+    List<Student> findByLastName(String LastName);
 }

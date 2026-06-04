@@ -33,8 +33,19 @@ import java.util.Scanner;
 			//searchStudent(studentDIO);
 			
 			//Database Query
-			queryForStudent(studentDIO);
+			//queryForStudent(studentDIO);
+			queryForStudentLastName(studentDIO);
 		};
+	}
+
+	private void queryForStudentLastName(StudentDIO studentDIO) {
+		// Gat a List Of Students
+		List<Student> theStudents = studentDIO.findByLastName("Siddique");
+
+		// Display List Of Students
+		for (Student student : theStudents) {
+			System.out.println("First Name: " + student.getFirstName() + " | Last Name: " + student.getLastName() + " | Email: " + student.getEmail());
+		}
 	}
 
 	private void queryForStudent(StudentDIO studentDIO) {
