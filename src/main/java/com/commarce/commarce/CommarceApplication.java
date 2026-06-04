@@ -23,16 +23,11 @@ import java.util.Scanner;
 
 		return _ -> {
 
-			// this creates single entry
-			//createStudent(studentDIO);
+			// createSingle(studentDIO);
 
-			//this creates multiple entry
 			//createMultiStudent(studentDIO);
 
-			//search students
 			//searchStudent(studentDIO);
-			
-			//Database Query
 
 			//queryForStudent(studentDIO);
 
@@ -40,8 +35,16 @@ import java.util.Scanner;
 
 			//updateStudent(studentDIO);
 
-			deleteStudent(studentDIO);
+			//deleteStudent(studentDIO);
+
+			deleteAllData(studentDIO);
 		};
+	}
+
+	private void deleteAllData(StudentDIO studentDIO) {
+		System.out.println("Deleting all data");
+		int numberOfRow = studentDIO.deleteAll();
+		System.out.println("Deleted " + numberOfRow + " row(s)");
 	}
 
 	private void deleteStudent(StudentDIO studentDIO) {

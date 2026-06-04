@@ -61,4 +61,10 @@ public class StudentDIOImpl implements StudentDIO {
         //delete data
         entityManager.remove(theStudent);
     }
+
+    @Override
+    @Transactional
+    public int deleteAll() {
+        return entityManager.createQuery("delete from Student ").executeUpdate();
+    }
 }
